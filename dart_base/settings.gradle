@@ -1,1 +1,2 @@
-include ':dartJava'
+// include ':dartJava'
+include ':flutter_paclage'

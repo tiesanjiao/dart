@@ -1,5 +1,7 @@
 package chapter2
 
+import java.util.*
+
 /**
  * Created by yuxinfeng on 2018/9/20.
  */
@@ -19,7 +21,36 @@ fun getColor(color: Color) = when (color) {
     }
 }
 
-fun main(args: Array<String>) {
-    println(Color.ORIGIN.rgb())
+//kotlin 迭代
+fun IteraSizeNumber() {
+    // 从1到100
+    for (i in 1..100) {
+        println(i)
+    }
+    // 从100到1间隔2
+    for (i in 100 downTo 1 step 2) {
+        println(i)
+    }
+}
 
+// kotlin map,迭代map
+// .. 不仅能够遍历数字范围还能遍历字符范围
+fun mapTest() {
+    val binaryReps = TreeMap<Char, String>();
+    for (c in 'A' .. 'F') {
+        val binary = Integer.toBinaryString(c.toInt())
+        binaryReps[c] = binary
+    }
+    for ((key, value) in binaryReps) {
+        println("$key, $value")
+    }
+}
+
+// in检查成员区间
+// in 或者 !in
+
+fun main(args: Array<String>) {
+    // println(Color.ORIGIN.rgb())
+    // println(IteraSizeNumber())
+    mapTest()
 }
